@@ -1,11 +1,7 @@
--- Creates a database that doesn't overwrite pre-existing versions
+-- creates the database hbtn_0d_usa and the table states (in the database hbtn_0d_usa) on your MySQL server
+-- creates a database
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
--- Switches the active database
+-- use a database
 USE hbtn_0d_usa;
--- Creates a table with a column that has automatically generated values
--- and is also the primary key
-CREATE TABLE IF NOT EXISTS states(
-    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    name VARCHAR(256) NOT NULL,
-    UNIQUE(id)
-);
+-- creates a table
+CREATE TABLE IF NOT EXISTS states (id INT UNIQUE NOT NULL AUTO_INCREMENT, name VARCHAR(256) NOT NULL, PRIMARY KEY(id));
